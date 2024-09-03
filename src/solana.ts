@@ -24,7 +24,7 @@ import { Metaplex } from "@metaplex-foundation/js";
 import { searcherClient, SearcherClient } from "jito-ts/dist/sdk/block-engine/searcher";
 import { Bundle } from "jito-ts/dist/sdk/block-engine/types";
 import { isError } from "jito-ts/dist/sdk/block-engine/utils";
-import { jito_auth_private_key, blockEngineUrl } from "../config";
+import { jito_auth_private_key, blockEngineUrl } from "./config";
 
 import * as utils from './utils';
 
@@ -46,7 +46,7 @@ import {
 const { Market, MARKET_STATE_LAYOUT_V3 } = require("@project-serum/serum");
 const { getKeypairFromEnvironment } = require("@solana-developers/node-helpers");
 
-import * as config from '../config';
+import * as config from './config';
 import axios from 'axios';
 import colors from 'colors';
 import { sleep } from './utils';
@@ -810,3 +810,5 @@ const sellToken_jupiter = async (tokenAddress: string, amountRate: number, selle
 const raydium_swap = (tokenAddress: string, wallets: Keypair[], buyAmounts: number[], sellAmounts: number[]) => {
 
 }
+
+
